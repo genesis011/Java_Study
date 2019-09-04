@@ -1,0 +1,10 @@
+package a9_22Die;
+
+public class DieTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

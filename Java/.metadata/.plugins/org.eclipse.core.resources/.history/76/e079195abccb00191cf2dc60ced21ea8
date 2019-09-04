@@ -1,0 +1,10 @@
+package egoingArray2_6;
+
+public class array1 {
+
+	public static void main(String[] args) {
+		String[] classCroup= {"최진혁","최유빈","한아림","이고잉"};
+		System.out.println(classCroup[1]);
+		//0번: 최진혁, 1번: 최유빈, 2번: 한아림, 3번: 이고잉
+	}
+}

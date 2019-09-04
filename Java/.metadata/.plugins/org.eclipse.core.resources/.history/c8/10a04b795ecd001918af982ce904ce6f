@@ -1,0 +1,18 @@
+package a9_19Movable;
+
+public interface Movable {
+	void move(int dx, int dy);
+}
+class Shape implements Movable{
+	protected int x,y;
+	private int dx;
+	private int dy;
+	
+	public void draw() {
+		System.out.println("Shape Draw");
+	}
+	public void move(int dx, int dy) {
+		this.dx=dx;
+		this.dy=dy;
+	}
+}

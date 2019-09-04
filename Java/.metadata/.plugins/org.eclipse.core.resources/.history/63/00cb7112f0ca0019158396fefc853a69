@@ -1,0 +1,6 @@
+package a_07_09Event;
+
+public class Graduate extends Student {
+	//1. 멤버변수 : 조교유형(교육조교, 연구조교),장학금비율(0~1)
+	
+}

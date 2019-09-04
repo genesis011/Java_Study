@@ -1,0 +1,16 @@
+package chapter07Single3;
+
+public class SingleTon {
+	private static SingleTon singleTon;
+	static {
+		
+	}
+	private SingleTon() {
+		
+	}
+	public static SingleTon getSingleTon() {
+		if(singleTon==null) {
+			singleTon=new SingleTon();
+		}
+	}
+}

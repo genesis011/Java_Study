@@ -1,0 +1,14 @@
+package chapter09.event;
+
+import java.awt.event.ActionListener;
+import java.util.Timer;
+
+public class MyClassTest {
+
+	public static void main(String[] args) {
+		ActionListener actionListener = new MyClass();
+//		시간 타이머로 이벤트를 자동으로 발생시켜보자.
+		Timer t=new Timer(1000, actionListener);
+	}
+
+}

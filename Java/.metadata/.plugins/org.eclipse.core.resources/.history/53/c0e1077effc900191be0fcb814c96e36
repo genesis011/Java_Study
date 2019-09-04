@@ -1,0 +1,5 @@
+package solution;
+
+public class Comparable {
+	private int comparable(Object);
+}

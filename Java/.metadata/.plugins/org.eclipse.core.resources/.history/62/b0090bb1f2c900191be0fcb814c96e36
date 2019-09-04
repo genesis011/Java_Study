@@ -1,0 +1,5 @@
+package chapter07single2;
+
+public class SingleTon {
+
+}

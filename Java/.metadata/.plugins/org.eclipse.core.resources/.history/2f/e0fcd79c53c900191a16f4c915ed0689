@@ -1,0 +1,8 @@
+package chapter07lody1;
+
+public class Car extends Bomb{
+	public Car() {
+		super();
+	}
+	
+}

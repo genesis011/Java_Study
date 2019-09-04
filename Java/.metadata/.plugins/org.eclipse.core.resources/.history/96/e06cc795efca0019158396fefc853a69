@@ -1,0 +1,5 @@
+package a_07_09Event;
+
+public class Graduate extends Student {
+
+}

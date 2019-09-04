@@ -1,0 +1,12 @@
+package chapter07lody1;
+
+public abstract class BombTest {
+
+	public static void main(String[] args) {
+		
+		Bomb[] bomb= {new Car(), new House(), new Bulding(), new Tree()};
+		for(int i=0;i<bomb.length;i++) {
+			
+		}
+	}
+}

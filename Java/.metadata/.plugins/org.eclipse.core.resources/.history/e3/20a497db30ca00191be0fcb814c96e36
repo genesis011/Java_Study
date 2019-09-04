@@ -1,0 +1,25 @@
+package a_07_09Person;
+
+public class Person {
+	String name, address, pnumber;
+
+	public Person() {
+		name = null;
+		address = null;
+		pnumber = null;
+	}
+
+	public Person(String name, String address, String pnumber) {
+		this.name = name;
+		this.address = address;
+		this.pnumber = pnumber;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+}

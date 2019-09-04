@@ -1,0 +1,8 @@
+package chapter07lody1;
+
+public class Bulding  extends Bomb{
+	public Bulding() {
+		super();
+	}
+	
+}

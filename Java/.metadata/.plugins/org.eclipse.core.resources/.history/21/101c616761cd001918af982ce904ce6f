@@ -1,0 +1,50 @@
+package a9_19Movable;
+
+public interface Movable {
+	void move(int dx, int dy);
+}
+class Shape implements Movable{
+	protected int x,y;
+	protected int dx;
+	protected int dy;
+	
+	public void draw() {
+		System.out.println("Shape Draw");
+	}
+	public void move(int dx, int dy) {
+		this.dx=dx;
+		this.dy=dy;
+		System.out.printf("Shape 도형의 기준점 이동 > > %d %d \n",x, y);
+	}
+}
+class Rectangle extends Shape{
+	private int width;
+	private int height;
+	
+	public void draw() {
+		System.out.println("Rectangle Draw");
+	}
+}
+class Triangle extends Shape{
+	private int base, height;
+	public void draw() {
+		System.out.println("Triangle Draw");
+	}
+	public void move(int dx, int dy) {
+		this.dx=dx;
+		this.dy=dy;
+		System.out.printf("Shape 도형의 기준점 이동 > > %d %d \n",x, y);
+	}
+}
+class Circle extends Shape{
+	private int base, height;
+	public void draw() {
+		System.out.println("Circle Draw");
+	}
+	public void move(int dx, int dy) {
+		this.dx=dx;
+		this.dy=dy;
+		System.out.printf("Shape 도형의 기준점 이동 > > %d %d \n",x, y);
+	}
+}
+

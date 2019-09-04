@@ -1,0 +1,8 @@
+package chapter07Single3;
+
+public class SingleTon {
+	private SingleTon=" ";
+		private static SingleTon singleTon;
+		
+	}
+}

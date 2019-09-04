@@ -1,0 +1,11 @@
+package chapter07lody1;
+
+public abstract class Bomb  extends Object{
+public static void bomb() {
+	System.out.println("====");
+}
+	public abstract void bomb() {
+		public void bomb2() {
+		System.out.println("--------");
+	}
+}

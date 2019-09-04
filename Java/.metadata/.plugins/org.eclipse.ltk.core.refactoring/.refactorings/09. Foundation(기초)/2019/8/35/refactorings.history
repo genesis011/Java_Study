@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;foundationFunsionStudy_B.GlobalScope&apos; to &apos;GlobalScopeExam&apos;&#x0D;&#x0A;- Original project: &apos;9. Foundation(기초)&apos;&#x0D;&#x0A;- Original element: &apos;foundationFunsionStudy_B.GlobalScope&apos;&#x0D;&#x0A;- Renamed element: &apos;foundationFunsionStudy_B.GlobalScopeExam&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;GlobalScope&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;foundationFunsionStudy_B{GlobalScope.java[GlobalScope" matchStrategy="1" name="GlobalScopeExam" qualified="false" references="true" similarDeclarations="false" stamp="1566737809437" textual="false" version="1.0"/>
+</session>

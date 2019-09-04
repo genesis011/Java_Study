@@ -1,0 +1,13 @@
+package ioepception;
+
+public class Test {
+
+	public static void main(String[] args) {
+ System.out.println(readString());
+	}
+
+	private static char[] readString() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

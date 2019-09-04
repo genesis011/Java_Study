@@ -1,0 +1,8 @@
+package a_07_09Event;
+
+public class StudentTest {
+
+	public static void main(String[] args) {
+		
+	}
+}

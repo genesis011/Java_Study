@@ -1,0 +1,20 @@
+package a_07_09Person;
+
+public class Customer extends Person{
+	String id;
+	int mileage;
+	
+	public Customer() {
+		id=null;
+		mileage=0;
+	}
+	public Customer(String name, String address, String pnumber) {
+		 super.name=name;
+		 super.address=address;
+		 super.pnumber=pnumber;
+		 this.mileage=mileage;
+	}
+	public void setId() {
+		
+	}
+}

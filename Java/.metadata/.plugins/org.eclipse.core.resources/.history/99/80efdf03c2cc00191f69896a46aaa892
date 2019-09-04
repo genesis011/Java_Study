@@ -1,0 +1,11 @@
+package a9_04Dove;
+
+abstrac class Bird{
+	abstrac void sound();
+}
+public class DoveTest {
+	
+	public static void main(String[] args) {
+		
+	}
+}

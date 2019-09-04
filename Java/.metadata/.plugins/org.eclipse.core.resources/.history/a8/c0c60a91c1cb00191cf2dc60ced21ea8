@@ -1,0 +1,12 @@
+package egoingArray2_6;
+
+public class Array2 {
+
+	public static void main(String[] args) {
+		String[] members = { "최진혁", "최유빈", "한이람" };
+		for (int i = 0; i < members.length; i++) {
+			String member = members[1];
+			System.out.println(members + "이 상담을 받았습니다.");
+		}
+	}
+}

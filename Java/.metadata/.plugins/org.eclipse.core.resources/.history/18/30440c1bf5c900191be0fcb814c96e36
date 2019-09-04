@@ -1,0 +1,23 @@
+package chapter07single2;
+
+public class SingleTon {
+	private String string="출석 완료";
+	private static SingleTon singleTon;
+	
+	static {
+		
+	}
+	private SingleTon() {
+		
+	}
+	public static SingleTon getSingleTon() {
+		if(singleTon==null) {
+			singleTon=new SingleTon();
+		}
+		return singleTon;
+	}
+	public void print() {
+		System.out.println("수업시작");
+		System.out.println("정각 ");
+	}
+}

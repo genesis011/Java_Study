@@ -1,0 +1,9 @@
+package b_Car;
+
+public class TestMain {
+
+		public static void main(String[] args) {
+			Opreator[] obj = {new Car(), new Bus(), new Sub()};
+			
+		}
+}

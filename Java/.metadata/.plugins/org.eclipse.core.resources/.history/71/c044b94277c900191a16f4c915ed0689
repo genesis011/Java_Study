@@ -1,0 +1,18 @@
+package chapter07lody2;
+
+import chapter07lody1.Bulding;
+
+public class BombTest {
+
+	public static void main(String[] args) {
+		Bomb[] bomb= {new Tree(), new House(), new Building(), new Car()};
+		for(int i=0;i<bomb.length;i++) {
+			if(bomb[i] instanceof Building) {
+				
+			}else if(){
+				
+			}
+		}
+	}
+
+}

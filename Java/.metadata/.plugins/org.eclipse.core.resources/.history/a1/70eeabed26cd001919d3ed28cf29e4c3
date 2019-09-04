@@ -1,0 +1,10 @@
+package anonymousClass무명클래스;
+
+public class a01_AnonymousClassTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

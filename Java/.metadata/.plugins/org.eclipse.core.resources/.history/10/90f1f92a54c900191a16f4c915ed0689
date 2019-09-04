@@ -1,0 +1,8 @@
+package chapter07lody1;
+
+public abstract class Bomb  extends Object{
+
+	public void bomb() {
+	}
+	
+}

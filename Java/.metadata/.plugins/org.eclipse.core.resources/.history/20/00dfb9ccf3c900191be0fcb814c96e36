@@ -1,0 +1,10 @@
+package chapter07single2;
+
+public class StringTonTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

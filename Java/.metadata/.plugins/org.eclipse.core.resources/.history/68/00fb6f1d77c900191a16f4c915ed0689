@@ -1,0 +1,11 @@
+package chapter07lody2;
+
+public abstract class Bomb extends Object  {
+
+	public void bomb() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+}

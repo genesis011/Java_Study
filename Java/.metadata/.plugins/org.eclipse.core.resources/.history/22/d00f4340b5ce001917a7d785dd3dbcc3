@@ -1,0 +1,15 @@
+package ioepception;
+
+public class Test {
+	public static final int SIZE=100;
+	public static void main(String[] args) {
+ System.out.println(readString());
+	}
+
+	public static String readString() {
+		byte[] buf=new byte[SIZE];
+		System.out.println("문자열을 입력하시오.");
+		System.in.read(buf);
+		return null;
+	}
+}

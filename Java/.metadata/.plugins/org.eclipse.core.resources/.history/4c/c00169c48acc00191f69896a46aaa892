@@ -1,0 +1,18 @@
+package egoingArray2_6;
+
+class Calculator {
+	static double PI = 3.14;
+	int left, right;
+
+	public void setOprands(int left, int right) {
+		this.left = left;
+		this.right = right;
+	}
+}
+
+public class E_Clss1 {
+
+	public static void main(String[] args) {
+
+	}
+}

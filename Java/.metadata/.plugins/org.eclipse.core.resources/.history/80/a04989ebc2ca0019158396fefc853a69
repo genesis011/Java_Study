@@ -1,0 +1,9 @@
+package Compara;
+
+public class Comparable {
+
+	public static void main(String[] args) {
+	String[] sports = new String[] {"","","","",""};	
+	String[] name = new String[] {"Çî¸®","±è¼öÇö","À¯Àç¼®","",""};	
+	}
+}

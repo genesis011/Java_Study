@@ -1,0 +1,9 @@
+package chapter07lody2;
+
+public class BombTest {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

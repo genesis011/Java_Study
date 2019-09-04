@@ -1,0 +1,9 @@
+package egoingArray2_6;
+
+public class array1 {
+
+	public static void main(String[] args) {
+		String[] classCroup= {"ÃÖÁøÇõ","ÃÖÀ¯ºó","ÇÑ¾Æ¸²","ÀÌ°íÀ×"};
+		System.out.println(0);
+	}
+}

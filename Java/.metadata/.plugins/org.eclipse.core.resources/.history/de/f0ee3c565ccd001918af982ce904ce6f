@@ -1,0 +1,5 @@
+package a9_18Drawable;
+
+public interface Drawable {
+
+}

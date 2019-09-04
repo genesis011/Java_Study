@@ -1,0 +1,23 @@
+package student;
+
+import javax.swing.Spring;
+
+class Student {
+
+	public Student(int number, String name) {
+		super();
+		this.number=number;
+		this.name=name;
+	}
+	private int number;
+	private String name;
+}
+public class GraduateStudent extends Student {
+
+	public GraduateStudent(int number, String name, String lab) {
+		super(number, name);
+		this.lab=lab;
+
+	}
+	public String lab;
+}

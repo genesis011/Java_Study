@@ -1,0 +1,20 @@
+package ComparableT;
+
+public abstract class Rectangle implements Comparable{
+	public int whidth;
+	public int height;
+	
+	public Rectangle( int whidth,int height ) {
+		super();
+		this.whidth=whidth;
+		this.height=height;
+	}
+	
+	@Override
+	public String toString() {
+		return "Rectangle [whidth=" + whidth + ", height=" + height + "]";
+	}
+	public int getArea() {
+		return.whidth*this.height;
+	}
+}

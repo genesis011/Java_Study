@@ -1,0 +1,5 @@
+package a9_19Movable;
+
+public interface Movable {
+
+}

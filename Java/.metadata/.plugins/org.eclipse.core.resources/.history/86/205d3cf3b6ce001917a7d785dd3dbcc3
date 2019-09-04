@@ -15,4 +15,5 @@ public class BitOperator80Page {
 		System.out.printf("%x \n", (x>>4));
 		System.out.printf("%x \n", (-1>>>4));
 	}
+
 }

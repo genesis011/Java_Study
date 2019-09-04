@@ -11,4 +11,5 @@ public class Box {
     	System.out.println( oranges/10 + "박스가 필요하고 " + 
 		oranges%10 + "개가 남습니다. ");
 	}
+
 }

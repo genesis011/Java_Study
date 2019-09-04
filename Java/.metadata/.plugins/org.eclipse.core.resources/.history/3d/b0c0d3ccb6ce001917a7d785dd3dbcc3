@@ -21,4 +21,5 @@ public class BadIndex {
 		}
 		System.out.println("4. 과연 이 문장이 실행이 될까요?"+result);
 	}
+
 }

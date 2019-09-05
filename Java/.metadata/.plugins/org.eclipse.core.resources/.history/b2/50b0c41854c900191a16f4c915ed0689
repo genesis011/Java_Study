@@ -1,9 +1,0 @@
-package chapter07lody1;
-
-public class Bomb  extends Object{
-
-	public void bomb() {
-		
-	}
-	
-}

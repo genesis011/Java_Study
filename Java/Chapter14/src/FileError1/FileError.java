@@ -20,10 +20,10 @@ public class FileError {
 		try {
 			writeList();
 		} catch (ArrayIndexOutOfBoundsException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 	}

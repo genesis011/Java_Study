@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
 <fullyQualifiedTypeName name="java.util.Timer"/>
@@ -18,7 +17,6 @@
 <fullyQualifiedTypeName name="a_07_09Event.UnderGraduate"/>
 <fullyQualifiedTypeName name="a_07_09Event.Graduate"/>
 <fullyQualifiedTypeName name="a_10Shape.Triangle"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
 <fullyQualifiedTypeName name="egoingArray2_6.Calculator"/>
 <fullyQualifiedTypeName name="a9_04Dove.Dove"/>
@@ -45,9 +43,20 @@
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
-<fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="java.io.PrintWriter"/>
 <fullyQualifiedTypeName name="java.io.FileWriter"/>
-<fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
 <fullyQualifiedTypeName name="FileError.FileError"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="myepception.MyException"/>
+<fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.lang.NoSuchFieldException"/>
+<fullyQualifiedTypeName name="chapter14.trycatch.BadIndex15.NotFoundException"/>
+<fullyQualifiedTypeName name="chapter14.trycatch.NotFoundException"/>
+<fullyQualifiedTypeName name="chapter14.trycatch.BadIndex16"/>
+<fullyQualifiedTypeName name="chapter14.trycatch.BankAccount"/>
+<fullyQualifiedTypeName name="java.lang.NegativeArraySizeException"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="myPair14.MyPair1.MyPair"/>
 </qualifiedTypeNameHistroy>

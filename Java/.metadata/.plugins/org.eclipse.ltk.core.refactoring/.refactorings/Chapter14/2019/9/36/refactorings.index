@@ -9,3 +9,14 @@
 1567556865230	Delete element
 1567560868443	Copy package
 1567561498781	Copy package
+1567575766374	Copy compilation unit
+1567577073639	Rename compilation unit 'BadIndex14.java'
+1567579588293	Move compilation unit
+1567580016421	Rename type 'BadIndex16'
+1567580323311	Move compilation unit
+1567580434626	Move compilation unit
+1567580464028	Rename type 'BadIndexTest14'
+1567580736505	Rename package 'checkNegative14'
+1567580748513	Rename package 'MyException'
+1567580760242	Rename type 'CheckNegative'
+1567659927891	Delete element

@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.sql.Date"/>
-<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
-<fullyQualifiedTypeName name="java.util.Timer"/>
-<fullyQualifiedTypeName name="javax.swing.Timer"/>
 <fullyQualifiedTypeName name="ComparableT.Rectangle"/>
 <fullyQualifiedTypeName name="ComparableT.Circle"/>
-<fullyQualifiedTypeName name="java.lang.Comparable"/>
 <fullyQualifiedTypeName name="InterFaceComparable.Comparable"/>
 <fullyQualifiedTypeName name="InterFaceComparable.Rectangle"/>
 <fullyQualifiedTypeName name="InterFaceComparable1.Compareble"/>
-<fullyQualifiedTypeName name="java.lang.Object"/>
 <fullyQualifiedTypeName name="InterFaceComparable1.Rectangle"/>
 <fullyQualifiedTypeName name="java.lang.invoke.SwitchPoint"/>
 <fullyQualifiedTypeName name="a_07_09Event.Student"/>
@@ -43,10 +37,7 @@
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
-<fullyQualifiedTypeName name="java.io.PrintWriter"/>
-<fullyQualifiedTypeName name="java.io.FileWriter"/>
 <fullyQualifiedTypeName name="FileError.FileError"/>
-<fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="myepception.MyException"/>
 <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
@@ -56,7 +47,17 @@
 <fullyQualifiedTypeName name="chapter14.trycatch.NotFoundException"/>
 <fullyQualifiedTypeName name="chapter14.trycatch.BadIndex16"/>
 <fullyQualifiedTypeName name="chapter14.trycatch.BankAccount"/>
-<fullyQualifiedTypeName name="java.lang.NegativeArraySizeException"/>
-<fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="myPair14.MyPair1.MyPair"/>
+<fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+<fullyQualifiedTypeName name="java.lang.NegativeArraySizeException"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="java.io.FileWriter"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="java.lang.Process"/>
+<fullyQualifiedTypeName name="BankA.BankAccount"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="BankA.NegativeBalanceException"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="java.lang.Comparable"/>
+<fullyQualifiedTypeName name="comparable.MyClass"/>
 </qualifiedTypeNameHistroy>

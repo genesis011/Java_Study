@@ -1,8 +1,0 @@
-package a_07_09Person;
-
-public class CustomerTest {
-
-	public static void main(String[] args) {
-		Customer cus =new Customer();
-	}
-}

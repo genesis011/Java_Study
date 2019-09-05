@@ -1,5 +1,0 @@
-package a_07_09Person;
-
-public class Person {
-	String name, address, pnumber;
-}

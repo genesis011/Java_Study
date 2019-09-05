@@ -1,7 +1,0 @@
-package chapter07lody2;
-
-public class Building {
-	public Building() {
-		super();
-	}
-}

@@ -1,8 +1,0 @@
-package chapter07lody2;
-
-public class House extends Bomb{
-	public House() {
-		super();
-	}
-
-}

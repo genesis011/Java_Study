@@ -1,8 +1,0 @@
-package solution;
-
-public class Comparable {
-	public int comparabTo(Object other) {
-		Rectangle otherRect=(Rectangle)other;
-		
-	}
-}

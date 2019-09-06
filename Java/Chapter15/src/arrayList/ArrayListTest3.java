@@ -7,15 +7,17 @@ public class ArrayListTest3 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ArrayList<MyClass>al=new ArrayList<MyClass>();
+		ArrayList<MyClass> al = new ArrayList<MyClass>();
 		al.add(new MyClass(10));
 		al.add(new MyClass(20));
 		al.add(new MyClass(30));
 		al.add(new MyClass(40));
-		
-		Iterator iter=al.iterator();
-		while(iter.hasNext()) {
-			MyClass mc=(MyClass)iter.next();
+		// 1. 컬렉션에서 이터레이터를 만들어라. 반드시 해당된 클래스 타입으로 받아라.
+		Iterator<MyClass> iter = al.iterator();
+		// 2. 반복문을 통해서 객체를 가지고 있는지 유뮤 확인 hasNext():다음객체 줄거 있는지
+		while (iter.hasNext()) {
+			// 3. 객체를 호출
+			MyClass mc = (MyClass) iter.next();
 			System.out.println(mc.number);
 		}
 	}

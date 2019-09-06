@@ -2,11 +2,13 @@ package vacter;
 
 import java.util.Vector;
 
+import javax.swing.text.html.HTMLDocument.Iterator;
+
 public class VacterTest {
 
 	public static void main(String[] args) {
 		Vector vc = new Vector();
-		MyClass mc=new MyClass(1);
+		MyClass mc = new MyClass(1);
 		// 벡터에 삽입
 
 		vc.add(new String("World"));
@@ -15,11 +17,24 @@ public class VacterTest {
 		vc.add(mc);
 		vc.add(1, "Hello");
 
-		// 출력
+		// 요소출력
+		java.util.Iterator iter = vc.iterator();
+		while (iter.hasNext()) {
+			Object ob = iter.next();
+			if (ob instanceof MyClass) {
+				MyClass mc1 = (MyClass) ob;
+				System.out.println(mc1.number);
+			} else {
+				System.out.println(ob);
+			}
+
+		}
+		System.out.println("================>");
+
 		for (int i = 0; i < vc.size(); i++) {
 			System.out.println(i + "=" + vc.get(i));
 		}
-		System.out.println("-----------");
+		System.out.println("----------->");
 		int j = 0;
 		for (Object o : vc) {
 			System.out.println((j++) + "=" + o);

@@ -1,7 +1,0 @@
-package a_10Shape;
-
-public class Triangle extends Shape{
-	private double height,base;
-	public double getHeight() {return height;};
-	public double getBase() {return base;};
-}

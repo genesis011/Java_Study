@@ -1,6 +1,0 @@
-package InterFaceComparable;
-
-public class Rectangle implements Comparable{
-	public int width;
-	public int height;
-}

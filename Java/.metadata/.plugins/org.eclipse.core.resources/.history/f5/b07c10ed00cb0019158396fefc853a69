@@ -1,9 +1,0 @@
-package a_10Shape;
-
-public class Shape {
-	private int x,y;
-	private double size;
-	public int getX() {return x;};
-	public int getY() {return y;};
-	public int getSize() {return size;};
-}

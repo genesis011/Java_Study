@@ -11,6 +11,5 @@ public class MyMethod {
 				largest = a[i];
 		}
 		return largest;
-		
 	}
 }

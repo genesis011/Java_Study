@@ -10,7 +10,6 @@ public class MyArrayAlg {
 			if (largest.compareTo(a[i]) < 0)
 				largest = a[i];
 		}
-
 		return null;
 	}
 }

@@ -1,8 +1,0 @@
-package a9_21Shape;
-
-public class Shape {
-	String color = "red";
-	public void calcArea() {}
-	public String toString() {return this.color;}
-}
-

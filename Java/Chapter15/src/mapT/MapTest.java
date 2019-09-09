@@ -14,6 +14,7 @@ public class MapTest {
 		
 		System.out.println(hm);
 		for (Entry<String, Student> set : hm.entrySet()) {
+			
 			Student stu = set.getValue();
 			String str = set.getKey();
 			System.out.println(str + "=" + stu.name + stu.number);

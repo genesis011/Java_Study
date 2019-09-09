@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="a9_21Shape.Triangle"/>
-<fullyQualifiedTypeName name="a9_21Shape.Shape"/>
-<fullyQualifiedTypeName name="a9_18Drawable.Drawable"/>
-<fullyQualifiedTypeName name="a9_18Drawable.Rectangle"/>
-<fullyQualifiedTypeName name="a9_18Drawable.Triangle"/>
-<fullyQualifiedTypeName name="a9_18Drawable.Cricle"/>
-<fullyQualifiedTypeName name="a9_19Movable.Movable"/>
-<fullyQualifiedTypeName name="a9_19Movable.Rectangle"/>
-<fullyQualifiedTypeName name="a9_19Movable.Triangle"/>
 <fullyQualifiedTypeName name="a9_19Movable.Circle"/>
 <fullyQualifiedTypeName name="a9_19Player.controllable"/>
 <fullyQualifiedTypeName name="a9_19Player.Player"/>
@@ -43,14 +34,10 @@
 <fullyQualifiedTypeName name="org.omg.CORBA.Object"/>
 <fullyQualifiedTypeName name="bacter.MyClass"/>
 <fullyQualifiedTypeName name="arrayList.ArrayListTest"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="javax.swing.text.html.HTMLDocument.Iterator"/>
 <fullyQualifiedTypeName name="java.lang.Iterable"/>
 <fullyQualifiedTypeName name="java.lang.Object"/>
 <fullyQualifiedTypeName name="vacter.MyClass"/>
 <fullyQualifiedTypeName name="arrayList.MyClass"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="javax.print.attribute.HashAttributeSet"/>
 <fullyQualifiedTypeName name="vacter.HashSet"/>
 <fullyQualifiedTypeName name="java.util.HashSet"/>
@@ -58,6 +45,19 @@
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="java.util.Queue"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="javax.swing.text.html.HTMLDocument.Iterator"/>
+<fullyQualifiedTypeName name="java.util.Collection"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="thread.Mythread"/>
+<fullyQualifiedTypeName name="thread.copy.copy2.Mythread"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="java.awt.Toolkit"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="java.util.Map.Entry"/>
 </qualifiedTypeNameHistroy>

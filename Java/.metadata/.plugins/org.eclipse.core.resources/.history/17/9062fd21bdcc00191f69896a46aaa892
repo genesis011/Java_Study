@@ -1,5 +1,0 @@
-package a9_02AudioSystem;
-
-public class AudioSystem extends SoundSystem impements MP3playable, TurnTableplayable{
-
-}

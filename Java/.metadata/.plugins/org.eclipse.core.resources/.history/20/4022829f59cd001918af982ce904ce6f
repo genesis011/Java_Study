@@ -1,8 +1,0 @@
-package a9_21Shape;
-
-public class ShapeTest {
-
-	public static void main(String[] args) {
-		
-	}
-}

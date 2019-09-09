@@ -1,8 +1,0 @@
-package anonymousClass_StringToken;
-
-public class StringTokenTest {
-
-	public static void main(String[] args) {
-		
-	}
-}

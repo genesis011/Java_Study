@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="a9_19Movable.Circle"/>
 <fullyQualifiedTypeName name="a9_19Player.controllable"/>
 <fullyQualifiedTypeName name="a9_19Player.Player"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
@@ -35,7 +34,6 @@
 <fullyQualifiedTypeName name="bacter.MyClass"/>
 <fullyQualifiedTypeName name="arrayList.ArrayListTest"/>
 <fullyQualifiedTypeName name="java.lang.Iterable"/>
-<fullyQualifiedTypeName name="java.lang.Object"/>
 <fullyQualifiedTypeName name="vacter.MyClass"/>
 <fullyQualifiedTypeName name="arrayList.MyClass"/>
 <fullyQualifiedTypeName name="javax.print.attribute.HashAttributeSet"/>
@@ -55,9 +53,11 @@
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="thread.Mythread"/>
 <fullyQualifiedTypeName name="thread.copy.copy2.Mythread"/>
-<fullyQualifiedTypeName name="java.lang.Thread"/>
-<fullyQualifiedTypeName name="java.awt.Toolkit"/>
-<fullyQualifiedTypeName name="java.lang.Runnable"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="java.util.Map.Entry"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="java.awt.Toolkit"/>
+<fullyQualifiedTypeName name="thread3.Mythread"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
 </qualifiedTypeNameHistroy>

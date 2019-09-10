@@ -1,5 +1,0 @@
-package a9_19Player;
-
-public interface controllable {
-
-}

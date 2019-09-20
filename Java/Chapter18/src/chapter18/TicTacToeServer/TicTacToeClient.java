@@ -27,12 +27,14 @@ public class TicTacToeClient extends Thread {
 	private BufferedReader input; // 입력 스트림
 	private PrintWriter output; // 출력 스트림
 
-	public TicTacToeClient() throws UnknownHostException, IOException {
-		socket = new Socket("localhost", 9001);
+	public TicTacToeClient(){
+		try {
+			socket = new Socket("192.168.0.228", 9001);
+			input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+			output = new PrintWriter(socket.getOutputStream(), true);
+		} catch (IOException e1) {e1.printStackTrace();}
 //		현재 로컬 컴퓨터에서만 실행
 //		소켓으로부터 입력 스트림과 출력 스트림을 구한다.
-		input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-		output = new PrintWriter(socket.getOutputStream(), true);
 //		애플리케이션의 GUI를 생성한다. 9장의 Lab과 동일하다.
 		frame = new JFrame(); panel = new JPanel();
 		panel.setLayout(new GridLayout(3, 3, 5, 5));
@@ -47,13 +49,13 @@ public class TicTacToeClient extends Thread {
 //		패널에 3격자 형식으로 버튼을 추가한다.
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
-				final int ii = i; final int jj = j;
+				final int ii = i; final int jj = j; //final
 				buttons[i][j] = new JButton(" ");
 				buttons[i][j].setFont(font);
 //				각 버튼데 이벤트 처리기를 붙인다. 람다식을 사용하였다.
 				buttons[i][j].addActionListener(e -> {
 					buttons[ii][jj].setText("" + me);
-					output.println("MOVE " + ii + " " + jj);
+					output.println("MOVE " + ii + " " + jj); //  한칸 띄우기 정확히 (잘못 했을시 요류도 안남)
 				});
 				panel.add(buttons[i][j]);
 			} // end of for j
@@ -69,7 +71,7 @@ public class TicTacToeClient extends Thread {
 			if (response.startsWith("START")) {
 //				START 명령어이면 경기를 시작한다.
 				me = response.charAt(6);//  java.lang.StringIndexOutOfBoundsException: 
-				other = (me == 'X') ? 'O' : 'X';
+				other = (me == 'X') ? ('O') : ('X');
 				message.setText("경기가 시작됩니다.");
 				frame.setTitle("현재 경기자는 " + me);
 			}

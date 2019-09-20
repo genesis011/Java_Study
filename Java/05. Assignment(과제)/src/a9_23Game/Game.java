@@ -43,4 +43,9 @@ public class Game {
 				System.out.println("ºñ°å½À´Ï´Ù.");
 		}
 	}
+
+	public void setBoard(int i, int j, char playerMark) {
+		// TODO Auto-generated method stub
+		
+	}
 }

@@ -51,4 +51,9 @@ public class ExampleTest {
 		if (br != null) {br.close();}
 		if (pw != null) {pw.close();}
 	}
-}
+}// 진한 파란색은  클래스명, 녹색은 함수, 
+//노랑은 변수 이름, 빨강은 키워드, 
+//보라색은 레퍼클래스, 밝은 하늘 색 데이터 값, 
+
+
+

@@ -38,6 +38,8 @@ public class AppMain extends Application {
 		list.add(textField);
 		list.add(button);
 
+//		1~3번까지 진행한 root.fxml을 가져온다.
+
 		// 4.루트 컨테이너를 scene에 집어넣는다.
 		Scene scene = new Scene(hBox);
 		// 5.stage에 scene를 집어넣는다.

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <Button text="Home" />
+            <Button prefHeight="23.0" prefWidth="56.0" text="메뉴1" />
+            <Button text="메뉴2" />
+            <Button text="메뉴3" />
+        </items>
+      </ToolBar>
+   </top>
+   <center>
+      <TextArea prefHeight="160.0" prefWidth="138.0" style="-fx-background-color: skyblue;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </TextArea>
+   </center>
+   <bottom>
+      <BorderPane prefHeight="0.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <center>
+            <TextField BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets right="10.0" />
+               </BorderPane.margin>
+            </TextField>
+         </center>
+         <right>
+            <Button text="Button" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   </bottom>
+</BorderPane>

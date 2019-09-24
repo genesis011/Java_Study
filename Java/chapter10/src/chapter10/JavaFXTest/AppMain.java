@@ -23,7 +23,7 @@ public class AppMain extends Application {
 			String key = entry.getKey();
 			String value = entry.getValue();
 			System.out.println("key" + key + "value" + value);
-		List<String>list =ps.getRaw();
+		
 		
 		}
 	}

@@ -4,9 +4,12 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import com.sun.webkit.network.about.Handler;
+
 import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Scene;
@@ -17,6 +20,9 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class AppMain1 extends Application {
+	public boolean flag = false;
+	public Label label;
+
 //	1. 생성자 콜함수
 	public AppMain1() {
 		System.out.println(Thread.currentThread().getName() + "스레드 AppMain() 생성자");
@@ -54,13 +60,14 @@ public class AppMain1 extends Application {
 		vBox.setSpacing(20);
 
 //		2. 컨트롤러
-		Label label = new Label();
+		label = new Label();
 		label.setText("JAVA FX");
 		label.setFont(new Font(50));
 
 		Button button = new Button();
 		button.setText("확인");
-		button.setOnAction((args0) -> Platform.exit());
+//		button.setOnAction((args0) -> Platform.exit());
+		button.setOnAction((e)-> handlerAction(e));
 
 //		3. 루트 컨테너에 컨트롤러를 집어넣는다.
 		ObservableList<Node> list = vBox.getChildren();
@@ -71,7 +78,19 @@ public class AppMain1 extends Application {
 		Scene scene = new Scene(vBox);
 //		5. stage에 scene을 집어넣는다.
 		primaryStage.setScene(scene);
-		primaryStage.show();
+		primaryStage.show();	
+	}
+
+	private void handlerAction(ActionEvent e) {
+		if (flag) {
+			label.setText("hello");
+			label.setFont(new Font(30));
+		} else {
+			label.setText("JAVA");
+			label.setFont(new Font(50));
+		}
+		flag = !flag;
+
 	}
 
 	@Override

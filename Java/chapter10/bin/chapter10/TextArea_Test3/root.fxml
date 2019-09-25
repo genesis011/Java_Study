@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox prefHeight="200.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml"  fx:controller="chapter10.TextArea_Test3.RootController">
+   <children>
+      <Label text="Label" />
+      <TextArea fx:id="txtOne" prefHeight="200.0" prefWidth="200.0" />
+      <Label text="Label" />
+      <TextArea fx:id="txtTow" prefHeight="200.0" prefWidth="200.0" />
+   </children>
+</VBox>

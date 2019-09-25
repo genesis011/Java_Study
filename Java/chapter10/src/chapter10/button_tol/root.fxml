@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="150.0" prefWidth="420.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="chapter10.button_tol.RootController">
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <children>
+      <CheckBox fx:id="checkClasses" layoutX="17.0" layoutY="26.0" mnemonicParsing="false" onAction="#handdlerChecBoxAction" text="안경" />
+      <CheckBox fx:id="checkCap" layoutX="17.0" layoutY="55.0" mnemonicParsing="false" onAction="#handdlerChecBoxAction" text="모자" />
+      <ImageView fx:id="imageCheck" fitHeight="150.0" fitWidth="100.0" layoutX="71.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/geek.gif" />
+         </image>
+      </ImageView>
+      <Separator layoutX="186.0" layoutY="10.0" orientation="VERTICAL" prefHeight="81.0" prefWidth="0.0" />
+      <RadioButton fx:id="checkbubble" layoutX="202.0" layoutY="18.0" mnemonicParsing="false" text="BubbleChart">
+         <toggleGroup>
+            <ToggleGroup fx:id="group" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="checkBar" layoutX="202.0" layoutY="43.0" mnemonicParsing="false" text="BarChart" toggleGroup="$group" />
+      <RadioButton fx:id="checkArea" layoutX="202.0" layoutY="67.0" mnemonicParsing="false" text="AreaChart" toggleGroup="$group" />
+      <ImageView fx:id="checkImage" fitHeight="150.0" fitWidth="100.0" layoutX="304.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/areaChart.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="181.0" layoutY="110.0" mnemonicParsing="false" />
+      <ImageView fx:id="checkButton" fitHeight="30.0" fitWidth="30.0" layoutX="171.0" layoutY="107.0" onDragDetected="#handdlerButtonExitAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/exit.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

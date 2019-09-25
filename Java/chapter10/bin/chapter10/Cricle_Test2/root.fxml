@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchrPane" prefHeight="200.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml"  fx:controller="chapter10.Cricle_Test2.RootController">
+   <children>
+      <Circle fx:id="circle" centerX="150.0" centerY="95.0" radius="60.0" stroke="BLACK" strokeType="INSIDE">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#654c8d" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Circle>
+   </children>
+</AnchorPane>

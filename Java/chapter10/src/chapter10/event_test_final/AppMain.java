@@ -20,6 +20,4 @@ public class AppMain extends Application {
 		primaryStage.setResizable(false);
 		primaryStage.show();
 	}
-
-
 }

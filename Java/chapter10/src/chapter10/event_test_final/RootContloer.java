@@ -28,13 +28,10 @@ public class RootContloer implements Initializable {
 			}
 		});
 		button2.setOnAction((e)-> {
-				String data=button1.getText();
-			
-			
-		});
-		
+				String data=button2.getText();
+				label.setText(data);				
+		});		
 	}
-	
 	
 	public void handlerButton3Action(ActionEvent e) {
 		String data=button3.getText();

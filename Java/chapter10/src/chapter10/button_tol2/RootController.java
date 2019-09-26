@@ -1,4 +1,4 @@
-package chapter10.button_tol;
+package chapter10.button_tol2;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -17,16 +17,25 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class RootController implements Initializable {
-	@FXML	private CheckBox checkClasses;
-	@FXML	private CheckBox checkCap;
-	@FXML	private ImageView imageCheck;
-	@FXML	private RadioButton checkbubble;
-	@FXML	private RadioButton checkBar;
-	@FXML	private RadioButton checkArea;
-	@FXML	private ToggleGroup group;
-	
-	@FXML	private ImageView checkImage;
-	@FXML	private ImageView checkButton;
+	@FXML
+	private CheckBox checkClasses;
+	@FXML
+	private CheckBox checkCap;
+	@FXML
+	private ImageView imageCheck;
+	@FXML
+	private RadioButton checkbubble;
+	@FXML
+	private RadioButton checkBar;
+	@FXML
+	private RadioButton checkArea;
+	@FXML
+	private ToggleGroup group;
+
+	@FXML
+	private ImageView checkImage;
+	@FXML
+	private ImageView checkButton;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -34,14 +43,17 @@ public class RootController implements Initializable {
 
 			@Override
 			public void changed(ObservableValue<? extends Toggle> observable, Toggle oldValue, Toggle newValue) {
-				Image image=new Image(getClass().getResource("images/"+newValue.getUserData().toString()+".png").toString());
+				Image image = new Image(
+						getClass().getResource("images/" + newValue.getUserData().toString() + ".png").toString());
 				checkImage.setImage(image);
 			}
 		});
 	}
+
 	public void handdlerButtonExitAction(ActionEvent e) {
 		Platform.exit();
 	}
+
 	public void handdlerChecBoxAction(ActionEvent e) {
 		if (checkClasses.isSelected() && checkCap.isSelected()) {
 			imageCheck.setImage(new Image(getClass().getResource("images/geek-glasses-hair.gif").toString()));
@@ -54,5 +66,18 @@ public class RootController implements Initializable {
 		} else {
 			imageCheck.setImage(new Image(getClass().getResource("images/geek.gif").toString()));
 		} // end HanddlerCheckBox
+	}
+
+	public void handlerRadioButtonAction(ActionEvent e) {
+		if (checkbubble.isSelected()) {
+			imageCheck.setImage(new Image(
+					getClass().getResource("images/" + checkbubble.getUserData().toString() + ".png").toString()));
+		} else if (checkBar.isSelected()) {
+			imageCheck.setImage(new Image(
+					getClass().getResource("images/" + checkBar.getUserData().toString() + ".png").toString()));
+		} else {
+			imageCheck.setImage(new Image(
+					getClass().getResource("images/" + checkBar.getUserData().toString() + ".png").toString()));
+		}
 	}
 }

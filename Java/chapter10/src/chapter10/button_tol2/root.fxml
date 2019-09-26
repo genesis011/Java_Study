@@ -20,13 +20,13 @@
          </image>
       </ImageView>
       <Separator layoutX="186.0" layoutY="10.0" orientation="VERTICAL" prefHeight="81.0" prefWidth="0.0" />
-      <RadioButton fx:id="checkbubble" layoutX="202.0" layoutY="18.0" mnemonicParsing="false" text="BubbleChart"  userData="bubbleChart">
+      <RadioButton fx:id="checkbubble" layoutX="202.0" layoutY="18.0" mnemonicParsing="false" text="BubbleChart"  userData="bubbleChart"  onDragDetected="#handdlerButtonExitAction" >
          <toggleGroup>
             <ToggleGroup fx:id="group" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton fx:id="checkBar" layoutX="202.0" layoutY="43.0" mnemonicParsing="false" text="BarChart" toggleGroup="$group"  userData="barChart"/>
-      <RadioButton fx:id="checkArea" layoutX="202.0" layoutY="67.0" mnemonicParsing="false" text="AreaChart" toggleGroup="$group"  userData="areaChart"/>
+      <RadioButton fx:id="checkBar" layoutX="202.0" layoutY="43.0" mnemonicParsing="false" text="BarChart" toggleGroup="$group"  userData="barChart"  onDragDetected="#handdlerButtonExitAction" />
+      <RadioButton fx:id="checkArea" layoutX="202.0" layoutY="67.0" mnemonicParsing="false" text="AreaChart" toggleGroup="$group"  userData="areaChart"  onDragDetected="#handdlerButtonExitAction"  />
       <ImageView fx:id="checkImage" fitHeight="150.0" fitWidth="100.0" layoutX="304.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/areaChart.png" />

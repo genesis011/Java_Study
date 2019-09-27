@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="220.0" prefWidth="530.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="chapter10.MedeaPlayer.RootController">
+   <children>
+      <StackPane layoutY="4.0" prefHeight="219.0" prefWidth="350.0">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="219.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Medea/audio.png" />
+               </image>
+            </ImageView>
+            <MediaView fx:id="mediaView" fitHeight="219.0" fitWidth="350.0" preserveRatio="false" />
+         </children>
+      </StackPane>
+      <Button fx:id="buttonPlay" layoutX="411.0" layoutY="34.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="재 생" />
+      <Button fx:id="buttonPause" layoutX="411.0" layoutY="72.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="멈 춤" />
+      <Button fx:id="buttonStop" layoutX="411.0" layoutY="112.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="중 지" />
+   </children>
+</AnchorPane>

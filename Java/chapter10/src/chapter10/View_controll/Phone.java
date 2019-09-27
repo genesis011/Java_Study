@@ -28,6 +28,11 @@ public class Phone {
 		this.image.set(image);
 //		this.image =new SimpleStringProperty(image);
 	}
+
+	@Override
+	public String toString() {
+		return "Phone [amartPhone=" + amartPhone.get() + ", image=" + image.get() + "]";
+	}
 	
 	
 	

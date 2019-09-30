@@ -16,7 +16,7 @@ public class AppMain extends Application {
 		Parent root=FXMLLoader.load(getClass().getResource("root.fxml"));
 		Scene scene=new Scene(root);
 		primaryStage.setScene(scene);
-		primaryStage.setTitle("¿Ã∫•∆Æ");
+		primaryStage.setTitle("Mercedes-sns & www.kokoboa.com & 2019/09/30");
 //		primaryStage.setResizable(false);
 		primaryStage.setResizable(true);
 		primaryStage.show();

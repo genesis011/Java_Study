@@ -31,6 +31,7 @@ public class RootController implements Initializable {
 		//3. 미디어뷰에 미디어플레이어를 삽입한다.
 		mediaView.setMediaPlayer(mediaPlayer);
 		//4. 준비상태 알려주는상태
+		
 		mediaPlayer.setOnReady(()-> {
 				//재생활성화, 멈춤 비활성화, 중지 비활성화
 				buttonPlay.setDisable(false);
@@ -91,6 +92,14 @@ public class RootController implements Initializable {
 				endOfMedia= false;
 			}
 		});
+		buttonPause.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent event) {
+				
+			}
+		});
+		
 		
 	}//end of initialize
 

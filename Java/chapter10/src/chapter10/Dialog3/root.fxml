@@ -11,7 +11,7 @@
       <AnchorPane prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #aeaeae;">
          <children>
             <Label layoutX="129.0" layoutY="22.0" style="-fx-font-size: 25;" text="MainDisplayTow" />
-            <Button fx:id="buttonDis2" layoutX="187.0" layoutY="83.0" mnemonicParsing="false" text="MainDisplay" />
+            <Button fx:id="buttonDis2" layoutX="182.0" layoutY="89.0" mnemonicParsing="false" text="MainDisplay" />
             <Button fx:id="buttonLogin21" layoutX="106.0" layoutY="331.0" mnemonicParsing="false" text="OK" />
             <Button fx:id="buttonLogin211" layoutX="287.0" layoutY="331.0" mnemonicParsing="false" text="Close" />
             <TextField layoutX="129.0" layoutY="228.0" prefHeight="23.0" prefWidth="192.0" />

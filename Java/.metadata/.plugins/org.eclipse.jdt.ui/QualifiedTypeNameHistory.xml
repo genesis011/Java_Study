@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.sun.webkit.network.about.Handler"/>
-<fullyQualifiedTypeName name="javafx.scene.Parent"/>
 <fullyQualifiedTypeName name="javafx.fxml.FXML"/>
 <fullyQualifiedTypeName name="javafx.scene.control.Separator"/>
 <fullyQualifiedTypeName name="javafx.beans.binding.Bindings"/>
@@ -36,7 +34,6 @@
 <fullyQualifiedTypeName name="javafx.collections.FXCollections"/>
 <fullyQualifiedTypeName name="chapter10.View_controll_Phone.Phone"/>
 <fullyQualifiedTypeName name="javafx.scene.control.TableColumn"/>
-<fullyQualifiedTypeName name="javafx.event.ActionEvent"/>
 <fullyQualifiedTypeName name="javafx.stage.FileChooser"/>
 <fullyQualifiedTypeName name="chapter10.Dialog.RootController"/>
 <fullyQualifiedTypeName name="java.lang.Object"/>
@@ -48,16 +45,19 @@
 <fullyQualifiedTypeName name="javafx.stage.Popup"/>
 <fullyQualifiedTypeName name="javafx.scene.image.ImageView"/>
 <fullyQualifiedTypeName name="javafx.event.Event"/>
-<fullyQualifiedTypeName name="javafx.scene.control.Label"/>
 <fullyQualifiedTypeName name="javafx.scene.transform.Scale"/>
-<fullyQualifiedTypeName name="javafx.scene.control.Button"/>
-<fullyQualifiedTypeName name="javafx.event.EventHandler"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="javafx.stage.Stage"/>
 <fullyQualifiedTypeName name="javafx.stage.StageStyle"/>
 <fullyQualifiedTypeName name="javafx.stage.Modality"/>
-<fullyQualifiedTypeName name="javafx.scene.layout.AnchorPane"/>
-<fullyQualifiedTypeName name="javafx.fxml.FXMLLoader"/>
-<fullyQualifiedTypeName name="javafx.scene.control.TextField"/>
 <fullyQualifiedTypeName name="javafx.scene.Scene"/>
+<fullyQualifiedTypeName name="javafx.event.EventHandler"/>
+<fullyQualifiedTypeName name="javafx.event.ActionEvent"/>
+<fullyQualifiedTypeName name="javafx.fxml.FXMLLoader"/>
+<fullyQualifiedTypeName name="javafx.scene.layout.AnchorPane"/>
+<fullyQualifiedTypeName name="javafx.scene.Parent"/>
+<fullyQualifiedTypeName name="javafx.scene.layout.StackPane"/>
+<fullyQualifiedTypeName name="javafx.scene.control.Label"/>
+<fullyQualifiedTypeName name="javafx.scene.control.Button"/>
+<fullyQualifiedTypeName name="javafx.scene.control.TextField"/>
 </qualifiedTypeNameHistroy>

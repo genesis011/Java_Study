@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="194.0" prefWidth="300.0" styleClass="root" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="chapter10.css_StageSkin.RootController">
+   <children>
+      <Label id="lable_welcome" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="62.0" layoutY="14.0" text="Walcome" />
+      <Label layoutX="43.0" layoutY="61.0" text="ID" />
+      <Label layoutX="41.0" layoutY="103.0" text="PW" />
+      <TextField layoutX="82.0" layoutY="57.0" />
+      <PasswordField layoutX="82.0" layoutY="99.0" />
+      <Button layoutX="82.0" layoutY="142.0" mnemonicParsing="false" styleClass="button_login" text="Login" />
+      <Button layoutX="172.0" layoutY="142.0" mnemonicParsing="false" styleClass="button_close" text="Close" />
+   </children>
+</AnchorPane>

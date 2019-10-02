@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chapter10.Dialog3.RootController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #aeaeae;">
+         <children>
+            <Label layoutX="129.0" layoutY="22.0" style="-fx-font-size: 25;" text="MainDisplayTow" />
+            <Button fx:id="buttonDis2" layoutX="187.0" layoutY="83.0" mnemonicParsing="false" text="MainDisplay" />
+            <Button fx:id="buttonLogin21" layoutX="106.0" layoutY="331.0" mnemonicParsing="false" text="OK" />
+            <Button fx:id="buttonLogin211" layoutX="287.0" layoutY="331.0" mnemonicParsing="false" text="Close" />
+            <TextField layoutX="129.0" layoutY="228.0" prefHeight="23.0" prefWidth="192.0" />
+            <TextField layoutX="129.0" layoutY="176.0" prefHeight="23.0" prefWidth="192.0" />
+            <Label layoutX="75.0" layoutY="180.0" text="Id" />
+            <Label layoutX="72.0" layoutY="232.0" text="PW" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

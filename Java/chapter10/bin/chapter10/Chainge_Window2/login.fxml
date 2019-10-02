@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPaneRoot" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #5D8A5D;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chapter10.Chainge_Window2.LoginController">
+   <children>
+      <Label layoutX="215.0" layoutY="22.0" style="-fx-font-size: 25;" text="MainDisplayIn" />
+      <Button fx:id="buttonMain1" layoutX="215.0" layoutY="60.0" mnemonicParsing="false" text="Main1" />
+      <ImageView fitHeight="300.0" fitWidth="450.0" layoutX="72.0" layoutY="97.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/squirrel.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="buttonMain2" layoutX="341.0" layoutY="60.0" mnemonicParsing="false" text="Main2" />
+   </children>
+</AnchorPane>

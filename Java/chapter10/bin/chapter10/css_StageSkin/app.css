@@ -1,0 +1,16 @@
+.root{
+	-fx-background-image:url("images/background.jpg")
+}
+#lable_welcome{
+	-fx-font-size:35;
+	-fx-font-family:"Arial Black";
+	-fx-font-weight:bold;
+	-fx-text-fill:linear-gradient(to bottom,darkgray,lightgray);
+	-fx-effect:innerShadow(three-pass-box,rgba(0,0,0,0.7),3,0,2,2.1);
+}
+Button:pressed{
+	-fx-effect:innerShadow(three-pass-box,rgba(0,0,0,0.7),3,0,2,2.1);
+}
+Button:hover{
+	-fx-background-color:linear-gradient(#FFAF00,#FFAF00);
+}

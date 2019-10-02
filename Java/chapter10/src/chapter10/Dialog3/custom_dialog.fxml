@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPaneRoot" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #eaeaea;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chapter10.Dialog3.LoginController">
+   <children>
+      <Label layoutX="71.0" layoutY="27.0" style="-fx-font-size: 25;" text="시험점수를 입력하세요" />
+      <Label layoutX="75.0" layoutY="136.0" text="국어" />
+      <Label layoutX="75.0" layoutY="174.0" text="음악" />
+      <Label layoutX="75.0" layoutY="210.0" text="영어" />
+      <TextField fx:id="textFildKOR" layoutX="111.0" layoutY="132.0" />
+      <TextField fx:id="textFildMUS" layoutX="111.0" layoutY="170.0" />
+      <TextField fx:id="textFildENG" layoutX="111.0" layoutY="206.0" />
+      <Button id="buttonOK" fx:id="buttonok" layoutX="277.0" layoutY="138.0" mnemonicParsing="false" text="확인" />
+      <Button id="buttonClear" fx:id="buttonclose" layoutX="277.0" layoutY="190.0" mnemonicParsing="false" text="취소" />
+      <Label layoutX="74.0" layoutY="245.0" text="총점" />
+      <Label id="buttonAverage" layoutX="74.0" layoutY="281.0" text="평균" />
+      <TextField fx:id="textFildTotal" layoutX="111.0" layoutY="241.0" />
+      <TextField id="textFildAverage" fx:id="textFildAverage" layoutX="111.0" layoutY="277.0" />
+      <Button fx:id="buttonAverage" layoutX="276.0" layoutY="243.0" mnemonicParsing="false" text="평균" />
+      <Button fx:id="buttonDis1" layoutX="137.0" layoutY="83.0" mnemonicParsing="false" text="MainDisplay" />
+   </children>
+</AnchorPane>

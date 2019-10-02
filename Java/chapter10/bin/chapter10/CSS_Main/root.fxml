@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox alignment="CENTER" prefHeight="50.0" prefWidth="460.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="chapter10.CSS_Main.RootController">
+   <children>
+      <Label style="-fx-background-color: skyblue; -fx-text-fill: #2e15eb; -fx-padding: 5; -fx-font-size: 15;" text="검정바탕, 노란글씨" textFill="#2e15eb">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </HBox.margin>
+      </Label>
+      <Label style="-fx-background-color: pink; -fx-text-fill: #2e15eb; -fx-padding: 5; -fx-font-size: 15;" text="검정바탕, 노란글씨" textFill="#2e15eb">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </HBox.margin>
+      </Label>
+      <Label style="-fx-background-color: blue; -fx-text-fill: #dfdee8b; -fx-padding: 5; -fx-font-size: 15;" text="검정바탕, 노란글씨" textFill="#dfdee8">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </HBox.margin>
+      </Label>
+   </children>
+</HBox>

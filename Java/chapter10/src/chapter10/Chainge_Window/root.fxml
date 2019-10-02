@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.StackPane?>
+
+
+<StackPane prefHeight="450.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="chapter10.Chainge_Window.RootController">
+   <children>
+      <AnchorPane prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #aeaeae;">
+         <children>
+            <Label layoutX="227.0" layoutY="14.0" style="-fx-font-size: 25;" text="MainDisplay" />
+            <Button fx:id="buttonLogin" layoutX="276.0" layoutY="50.0" mnemonicParsing="false" text="Login" />
+            <ImageView fitHeight="300.0" fitWidth="450.0" layoutX="76.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/etretat.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

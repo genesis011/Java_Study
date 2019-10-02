@@ -1,0 +1,8 @@
+VBox{
+	-fx-padding:10;
+}
+Label{
+	-fx-font-size:35;
+	-fx-font-family:"Arial Black";
+	-fx-text-fill:linear-gradient(to bottom, blue, white);
+}

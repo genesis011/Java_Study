@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="20.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/dialog-warning.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="88.0" layoutY="25.0" text="시험점수를 입력하세요" />
+      <Label layoutX="33.0" layoutY="60.0" text="국어" />
+      <Label layoutX="33.0" layoutY="87.0" text="음악" />
+      <Label layoutX="33.0" layoutY="114.0" text="영어" />
+      <TextField id="textFildKOR" layoutX="69.0" layoutY="56.0" />
+      <TextField id="textFildMUS" layoutX="69.0" layoutY="83.0" />
+      <TextField id="textFildENG" layoutX="69.0" layoutY="110.0" />
+      <Button id="buttonOK" layoutX="235.0" layoutY="62.0" mnemonicParsing="false" text="확인" />
+      <Button id="buttonClear" layoutX="235.0" layoutY="106.0" mnemonicParsing="false" text="취소" />
+      <Button id="buttonAverage" layoutX="235.0" layoutY="130.0" mnemonicParsing="false" text="평균" />
+      <Label layoutX="32.0" layoutY="141.0" text="총점" />
+      <Label id="buttonAverage" layoutX="32.0" layoutY="169.0" text="평균" />
+      <TextField id="textFildTotal" layoutX="69.0" layoutY="137.0" />
+      <TextField id="textFildAverage" layoutX="69.0" layoutY="165.0" />
+      <Button layoutX="234.0" layoutY="149.0" mnemonicParsing="false" text="평균" />
+   </children>
+</AnchorPane>

@@ -12,5 +12,6 @@ partialcoverage_stylePreferences=NONE
 partialcoverage_text=false
 printMargin=true
 printMarginAllowOverride=true
+spellingEnabled=false
 writeOccurrenceHighlighting=false
 writeOccurrenceIndicationInOverviewRuler=false

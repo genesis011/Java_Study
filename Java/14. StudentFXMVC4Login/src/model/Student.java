@@ -4,6 +4,7 @@ public class Student {
 	private String name;
 	private String level;
 	private String ban;
+	private String gender;//성별추가
 	private String korean;
 	private String english;
 	private String math;
@@ -13,19 +14,14 @@ public class Student {
 	private String total;
 	private String avg;
 	
-	public Student(String name, String level, String ban, String korean, String english, String math, String sic,
+	public Student(String name, String level, String ban,String gender, String korean, String english, String math, String sic,
 			String soc, String music, String total, String avg) {
 		super();
-		this.name = name;
-		this.level = level;
-		this.ban = ban;
-		this.korean = korean;
-		this.english = english;
-		this.math = math;
-		this.sic = sic;
-		this.soc = soc;
-		this.music = music;
-		this.total = total;
+		this.name = name;		this.level = level;
+		this.ban = ban;	this.gender=gender;	this.korean = korean;
+		this.english = english;		this.math = math;
+		this.sic = sic;		this.soc = soc;
+		this.music = music;		this.total = total;
 		this.avg = avg;
 	}
 
@@ -51,6 +47,13 @@ public class Student {
 
 	public void setBan(String ban) {
 		this.ban = ban;
+	}
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 
 	public String getKorean() {

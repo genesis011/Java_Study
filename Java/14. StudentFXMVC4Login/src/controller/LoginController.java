@@ -60,6 +60,7 @@ public class LoginController extends Object implements Initializable {
 			} catch (IOException e1) {
 //				System.out.println("메인창오류"+e);
 				alertDisplay(1,"메인창 콜실패","메인창 부르기 실패",e1.toString());
+				e1.printStackTrace();
 			}
 			
 			

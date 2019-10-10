@@ -79,14 +79,10 @@ public class StudentDAO {
       return count;
    }
 
-   
-
 private void alertDisplay(int i, String string, String string2, String string3) {
 	// TODO Auto-generated method stub
 	
 }
-
-
 
 // ⑦ 학생의 name을 입력받아 정보 조회
    public StudentVO getStudentCheck(String name) throws Exception {

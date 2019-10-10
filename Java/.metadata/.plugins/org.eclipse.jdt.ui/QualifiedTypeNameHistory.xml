@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javafx.scene.media.MediaView"/>
-<fullyQualifiedTypeName name="java.lang.Runnable"/>
-<fullyQualifiedTypeName name="javafx.scene.media.MediaPlayer"/>
-<fullyQualifiedTypeName name="javafx.scene.control.ProgressIndicator"/>
 <fullyQualifiedTypeName name="javafx.scene.control.Slider"/>
 <fullyQualifiedTypeName name="javafx.util.Duration"/>
 <fullyQualifiedTypeName name="javafx.scene.control.ProgressBar"/>
@@ -56,8 +52,12 @@
 <fullyQualifiedTypeName name="java.sql.DriverManager"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
-<fullyQualifiedTypeName name="model.Student"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
-<fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="javafx.scene.control.DatePicker"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="model.StudentVO"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="model.Student"/>
+<fullyQualifiedTypeName name="controller.StudentDAO"/>
+<fullyQualifiedTypeName name="controller.DBUtil"/>
 </qualifiedTypeNameHistroy>

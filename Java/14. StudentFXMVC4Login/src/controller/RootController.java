@@ -21,7 +21,7 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import model.Student;
-
+import model.StudentVO;
 
 public class RootController extends Object implements Initializable {
 	@FXML private TextField txtName;	
@@ -40,6 +40,7 @@ public class RootController extends Object implements Initializable {
 	@FXML private Button buttonInit;
 	@FXML private Button buttonOk;	
 	@FXML private Button buttonExit;
+	@FXML private Button btnTotalList;	//전체
 	@FXML private ToggleGroup genderGroup;
 	@FXML private RadioButton rbMale;
 	@FXML private RadioButton rbFemale;
@@ -139,8 +140,13 @@ public class RootController extends Object implements Initializable {
 //		3. 테이블 설정에서 테이블 뷰를 편집못하게 설정
 		tableView.setEditable(false);
 //		테이블 절정 컬럼 셋팅
+		TableColumn colNo=new TableColumn("NO");
+		colNo.setMaxWidth(40);
+		colNo.setStyle("-fx-alignment: CENTER;");
+		colNo.setCellValueFactory(new PropertyValueFactory("no"));
+		
 		TableColumn colName=new TableColumn("성명");
-		colName.setMaxWidth(70);
+		colName.setMaxWidth(40);
 		colName.setStyle("-fx-alignment: CENTER;");
 		colName.setCellValueFactory(new PropertyValueFactory("name"));
 		
@@ -155,7 +161,7 @@ public class RootController extends Object implements Initializable {
 		colBan.setCellValueFactory(new PropertyValueFactory("ban"));
 		
 		TableColumn colGender=new TableColumn("성별");
-		colBan.setMaxWidth(40);
+		colBan.setMaxWidth(30);
 		colBan.setStyle("-fx-alignment: CENTER;");
 		colBan.setCellValueFactory(new PropertyValueFactory("gender"));
 		
@@ -201,7 +207,9 @@ public class RootController extends Object implements Initializable {
 
 //		2.테이블뷰 설정 컬럼틀 객체를 테이블뷰에 추가 및 항목추가
 		tableView.setItems(data);
-		tableView.getColumns().addAll(colName,colLevel,colBan,colGender,colKorean,colEnglish,colMath,colSic,colSoc,colMusic,colTotal,  colAvg);
+		tableView.getColumns().addAll(colNo,colName,colLevel,colBan,
+				colGender,colKorean,colEnglish,colMath,colSic,colSoc,
+				colMusic,colTotal,  colAvg);
 		
 	}
 //	1. 버튼 초기화 (총점, 평균, 초기화, 
@@ -257,18 +265,18 @@ public class RootController extends Object implements Initializable {
 			if(txtTotal.getText().equals("") || txtAvg.getText().equals("")) {
 				throw new Exception(); //11111
 			} else {
-				Student student = new Student(txtName.getText(),
+				StudentVO student = new StudentVO(txtName.getText(),
 						comboBoxYear.getSelectionModel().getSelectedItem(), 
 						txtBan.getText(),
 						genderGroup.getSelectedToggle().getUserData().toString(),
-						txtKo.getText(), 
-						txtEng.getText(),
-						txtMath.getText(), 
-						txtSic.getText(), 
-						txtSoc.getText(), 
-						txtMusic.getText(), 
-						txtTotal.getText(), 
-						txtAvg.getText());
+						Integer.parseInt(txtKo.getText().trim()), 
+						Integer.parseInt(txtEng.getText().trim()),
+						Integer.parseInt(txtMath.getText().trim()), 
+						Integer.parseInt(txtSic.getText().trim()), 
+						Integer.parseInt(txtSoc.getText().trim()), 
+						Integer.parseInt(txtMusic.getText().trim()), 
+						Integer.parseInt(txtTotal.getText().trim()), 
+						Double.parseDouble(txtAvg.getText().trim()));
 //				테이블뷰에 이미들어간 순간
 				if(editDelete==true) {
 					data.remove(selectedIndex);

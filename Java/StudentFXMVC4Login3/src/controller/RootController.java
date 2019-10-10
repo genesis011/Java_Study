@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.text.DecimalFormat;
 import java.text.ParsePosition;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import javafx.application.Platform;
@@ -155,7 +156,13 @@ public class RootController implements Initializable {
       btnBarChart.setOnAction(e -> {
          handlerBtnBarChartAction(e);
       });
-
+      // 14. 맨 처음에 테이블뷰에 데이타베이스 값을 읽어서 테이블뷰에 가져온다.
+      btnTotalList();
+      // 15. 전체 리스틀르 누르면 데이타베이스에서 값을 가져오기
+      btnTotalList.setOnAction(e -> {
+          handlerBtnTotalListAction(e);
+       });
+      
       // 테스팅을 위한 디버깅
       txtName.setText("aaa");
       // txtLevel.setText("2");
@@ -168,7 +175,7 @@ public class RootController implements Initializable {
       txtSic.setText("23");
       txtSoc.setText("23");
       txtMusic.setText("23");
-   }
+   } 
 
    // 1. 버튼초기화(총점,평균,초기화,등록,종료,수정,삭제)설정 및 총점, 평균 텍스트필드 비활성화
    public void buttonInitSetting(boolean b, boolean c, boolean d, boolean e, boolean f, boolean g, boolean h) {
@@ -397,7 +404,6 @@ public class RootController implements Initializable {
    }
 
    // 6. 등록버튼을 눌렀을때 테이블에 등록하고, 모든값을 초기화한다.
-   // 6. 등록버튼을 눌렀을때 테이블에 등록하고, 모든값을 초기화한다.
    public void handlerBtnOkAction(ActionEvent e) {
       // 총점과 평균이 있는지 확인한다.
       try {
@@ -420,22 +426,23 @@ public class RootController implements Initializable {
                // 데이타베이스 테이블에 입력값을 입력하는 함수.
                int count = studentDAO.getStudentregiste(svo);
                if (count != 0) {
-                  data.add(svo);
+            	   data.removeAll(data);
+//                  data.add(svo);
+            	   btnTotalList();
                } else {
-                  throw new Exception("");
+                  throw new Exception("데이타베이스 접속 실패");
                }
             }
             alertDisplay(1, "등록성공", "테이블등록성공", "축하축하..");
          }
       } catch (Exception e2) {
-         alertDisplay(1, "등록실패", "합계,평균제대로입력요망", "정신차려");
+         alertDisplay(1, "등록실패", "합계,평균제대로입력요망", e2.toString());
          return;
       }
       // 5. 초기화버튼을 눌렀을때 1번 버튼초기화, 텍스트 필드 모두활성화
       handlerBtnInitAction(e);
    }
 
-   // 7. 검색버튼을 눌렀을때 테이블뷰에서 찾기기능
    // 7. 검색버튼을 눌렀을때 테이블뷰에서 찾기기능
    public void handlerBtnSearchAction(ActionEvent e) {
       for (StudentVO student : data) {
@@ -449,7 +456,14 @@ public class RootController implements Initializable {
 
    // 8. 삭제버튼을 눌렀을대 테이블뷰에서 삭제기능
    public void handlerBtnDeleteAction(ActionEvent e) {
-      data.remove(selectedIndex);
+	   try {
+//	      data.remove(selectedIndex);
+	      StudentDAO studentDAO =new StudentDAO();
+	      studentDAO.getStudentDelete(selectStudent.get(0).getNo());
+	      data.removeAll(data);
+	} catch (Exception e1) {
+		alertDisplay(1,"삭제오류","8. 삭제오류","다시 확인해주세요");
+	}
       // 1. 버튼초기화(총점,평균x,초기화,등록x,종료,수정x,삭제x)
       buttonInitSetting(false, true, false, true, false, true, true);
       // 텍스트필드 비활성화(이름,학년,반,성별,국어,영어,수학,과학,사회,음악)
@@ -743,7 +757,33 @@ public class RootController implements Initializable {
       }
 
    }
-
+   
+   // 14. 맨 처음에 테이블뷰에 데이타베이스 값을 읽어서 테이블뷰에 가져온다.
+	public void btnTotalList(){
+	 	  ArrayList<StudentVO>list=null;
+	 	  StudentDAO studentDAO=new StudentDAO();
+	 	  StudentVO studentVO=null;
+	 	  list=studentDAO.getStudentTotal();
+	 	  if(list==null) {
+	 		 alertDisplay(1,"경고","DB가져오기 오류", "점검요망");
+	 		  return;
+	 	  }
+	 	  
+	 	  for(int i=0;i<list.size();i++) {
+	 		 studentVO =list.get(i);
+	 		 data.add(studentVO);
+	 	  }
+	   }  
+	
+	// 15. 전체 리스틀르 누르면 데이타베이스에서 값을 가져오기
+   public void handlerBtnTotalListAction(ActionEvent e) {
+	   try {
+	data.removeAll(data);
+	btnTotalList();
+	   }catch(Exception e1) {
+		   alertDisplay(1, "전체리스트 오류","15번 전체리스트 오류발생",e1.toString());
+	   }
+}
    // 경고창디스플레이
    public void alertDisplay(int type, String title, String headerText, String contentText) {
       Alert alert = null;

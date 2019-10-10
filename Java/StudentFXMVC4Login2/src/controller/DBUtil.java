@@ -10,7 +10,7 @@ public class DBUtil {
 // 1. 드라이버명을 통해서 적재(저장)
 	private static String driver = "com.msql.jdbc.Driver";
 //	2. 데이타 베이스 url저장 
-	private static String url="jdbc:mysql://localhost/studentDB";//접근내용
+	private static String url="jdbc:mysql://192.168.0.228/studentDB";//접근내용
 	
 //	2. 드라이버를 적재하고, 데이타베이스를 연결하는 함수
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {

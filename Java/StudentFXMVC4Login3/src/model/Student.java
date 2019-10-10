@@ -3,9 +3,9 @@ package model;
 public class Student {
 	private String no;
 	private String name;
+	private String gender;
 	private String level;
 	private String ban;
-	private String gender;//성별추가
 	private String korean;
 	private String english;
 	private String math;
@@ -14,22 +14,32 @@ public class Student {
 	private String music;
 	private String total;
 	private String avg;
-	
-	public Student(String name, String level, String ban,String gender, String korean, String english, String math, String sic,
-			String soc, String music, String total, String avg) {
+
+	public Student() {
 		super();
-		this.name = name;		this.level = level;
-		this.ban = ban;	this.gender=gender;	this.korean = korean;
-		this.english = english;		this.math = math;
-		this.sic = sic;		this.soc = soc;
-		this.music = music;		this.total = total;
-		this.avg = avg;
 	}
 
-	public Student(String no, String name, String level, String ban, String gender, String korean, String english,
+	public Student(String no, String name, String gender, String level, String ban, String korean, String english,
 			String math, String sic, String soc, String music, String total, String avg) {
 		super();
 		this.no = no;
+		this.name = name;
+		this.gender = gender;
+		this.level = level;
+		this.ban = ban;
+		this.korean = korean;
+		this.english = english;
+		this.math = math;
+		this.sic = sic;
+		this.soc = soc;
+		this.music = music;
+		this.total = total;
+		this.avg = avg;
+	}
+
+	public Student(String name, String level, String ban, String gender, String korean, String english, String math,
+			String sic, String soc, String music, String total, String avg) {
+		super();
 		this.name = name;
 		this.level = level;
 		this.ban = ban;
@@ -68,19 +78,20 @@ public class Student {
 		this.level = level;
 	}
 
-	public String getBan() {
-		return ban;
-	}
-
-	public void setBan(String ban) {
-		this.ban = ban;
-	}
 	public String getGender() {
 		return gender;
 	}
 
 	public void setGender(String gender) {
 		this.gender = gender;
+	}
+
+	public String getBan() {
+		return ban;
+	}
+
+	public void setBan(String ban) {
+		this.ban = ban;
 	}
 
 	public String getKorean() {
@@ -146,6 +157,4 @@ public class Student {
 	public void setAvg(String avg) {
 		this.avg = avg;
 	}
-	
-	
 }

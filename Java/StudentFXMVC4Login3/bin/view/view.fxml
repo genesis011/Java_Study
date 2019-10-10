@@ -142,8 +142,8 @@
 							promptText="이름" />
 						<Button fx:id="btnBarChart">바 차트</Button>
 						<DatePicker fx:id="dpDate"></DatePicker>
-						<Button fx:id="btnSearch">검색</Button>
 						<Button fx:id="btnTotalList">전체</Button>
+						<Button fx:id="btnSearch">검색</Button>
 					</children>
 				</HBox>
 				<TableView fx:id="tableView" prefHeight="310"

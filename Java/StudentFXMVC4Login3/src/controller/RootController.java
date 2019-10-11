@@ -104,7 +104,7 @@ public class RootController implements Initializable {
    private StudentDAO studentDAO;
 
    @Override
-   
+
    public void initialize(URL arg0, ResourceBundle arg1) {
       // 1. 버튼초기화(총점, 평균x,초기화,등록x,종료,수정x,삭제x)
       buttonInitSetting(false, true, false, true, false, true, true);
@@ -156,12 +156,12 @@ public class RootController implements Initializable {
       btnBarChart.setOnAction(e -> {
          handlerBtnBarChartAction(e);
       });
-      // 14. 맨 처음에 테이블뷰에 데이타베이스 값을 읽어서 테이블뷰에 가져온다.
-      btnTotalList();
-      // 15. 전체 리스틀르 누르면 데이타베이스에서 값을 가져오기
+      // 14. 맨처음 테이블뷰에 데이터베이스 값을 읽어서 테이블 뷰에 가져온다.
+      totalList();
+      // 15. 전체를 리스트를 누르면 데이타베이스에서 값을 가져온다.
       btnTotalList.setOnAction(e -> {
-          handlerBtnTotalListAction(e);
-       });
+         handlerBtnTotalListAction(e);
+      });
       
       // 테스팅을 위한 디버깅
       txtName.setText("aaa");
@@ -175,9 +175,9 @@ public class RootController implements Initializable {
       txtSic.setText("23");
       txtSoc.setText("23");
       txtMusic.setText("23");
-   } 
+   }
 
-   // 1. 버튼초기화(총점,평균,초기화,등록,종료,수정,삭제)설정 및 총점, 평균 텍스트필드 비활성화
+// 1. 버튼초기화(총점,평균,초기화,등록,종료,수정,삭제)설정 및 총점, 평균 텍스트필드 비활성화
    public void buttonInitSetting(boolean b, boolean c, boolean d, boolean e, boolean f, boolean g, boolean h) {
       btnTotal.setDisable(b);
       btnAvg.setDisable(c);
@@ -411,7 +411,7 @@ public class RootController implements Initializable {
             throw new Exception();
          } else {
             StudentVO svo = new StudentVO(txtName.getText(), cbYear.getSelectionModel().getSelectedItem(),
-                  txtBan.getText(), (genderGroup.getSelectedToggle().getUserData()).toString(),
+                  txtBan.getText(), genderGroup.toString(),
                   Integer.parseInt(txtKo.getText().trim()), Integer.parseInt(txtEng.getText().trim()),
                   Integer.parseInt(txtMath.getText().trim()), Integer.parseInt(txtSic.getText().trim()),
                   Integer.parseInt(txtSoc.getText().trim()), Integer.parseInt(txtMusic.getText().trim()),
@@ -426,17 +426,18 @@ public class RootController implements Initializable {
                // 데이타베이스 테이블에 입력값을 입력하는 함수.
                int count = studentDAO.getStudentregiste(svo);
                if (count != 0) {
-            	   data.removeAll(data);
-//                  data.add(svo);
-            	   btnTotalList();
+                  data.removeAll(data);
+                     totalList();
+                     data.add(svo);
                } else {
-                  throw new Exception("데이타베이스 접속 실패");
+                  throw new Exception("");
                }
             }
             alertDisplay(1, "등록성공", "테이블등록성공", "축하축하..");
          }
       } catch (Exception e2) {
-         alertDisplay(1, "등록실패", "합계,평균제대로입력요망", e2.toString());
+    	  e2.printStackTrace();
+         alertDisplay(1, "등록실패", "합계,평균제대로입력요망", "정신차려");
          return;
       }
       // 5. 초기화버튼을 눌렀을때 1번 버튼초기화, 텍스트 필드 모두활성화
@@ -445,25 +446,42 @@ public class RootController implements Initializable {
 
    // 7. 검색버튼을 눌렀을때 테이블뷰에서 찾기기능
    public void handlerBtnSearchAction(ActionEvent e) {
-      for (StudentVO student : data) {
-         if (txtSearch.getText().equals(student.getName())) {
-            tableView.getSelectionModel().select(student);
-            return;
-         }
-      }
-      alertDisplay(1, "검색결과", "이름검색오류", "정확한이름을 입력요망");
+	   try {
+		   ArrayList<StudentVO>list=new ArrayList<StudentVO>();
+	   StudentDAO studentDAO = new StudentDAO();
+		list=studentDAO.getStudentCheck(txtSearch.getText());
+		System.out.println("list.sice"+list.size());
+		if(list==null) {
+			throw new Exception("검색오류");
+		}
+		data.removeAll(data);
+		for(StudentVO svo:list) {
+			data.add(svo);
+		}
+//		for (StudentVO student : data) {
+//	         if (txtSearch.getText().equals(student.getName())) {
+//	            tableView.getSelectionModel().select(student);
+//	            return;
+//	         }
+//	      }
+	} catch (Exception e1) {
+		alertDisplay(1, "검색결과", "이름검색오류", "정확한이름을 입력요망"+e1.toString());		
+		e1.printStackTrace();
+	}
+      
    }
 
-   // 8. 삭제버튼을 눌렀을대 테이블뷰에서 삭제기능
+// 8. 삭제버튼을 눌렀을대 테이블뷰에서 삭제기능
    public void handlerBtnDeleteAction(ActionEvent e) {
-	   try {
-//	      data.remove(selectedIndex);
-	      StudentDAO studentDAO =new StudentDAO();
-	      studentDAO.getStudentDelete(selectStudent.get(0).getNo());
-	      data.removeAll(data);
-	} catch (Exception e1) {
-		alertDisplay(1,"삭제오류","8. 삭제오류","다시 확인해주세요");
-	}
+      try {
+         
+         StudentDAO studentDAO = new StudentDAO();
+         studentDAO.getStudentDelete(selectStudent.get(0).getNo());
+         data.removeAll (data);
+         totalList();
+      } catch (Exception e1) {
+         alertDisplay(1, "삭제오류 ","8 삭제 오류",e1.toString());
+      }
       // 1. 버튼초기화(총점,평균x,초기화,등록x,종료,수정x,삭제x)
       buttonInitSetting(false, true, false, true, false, true, true);
       // 텍스트필드 비활성화(이름,학년,반,성별,국어,영어,수학,과학,사회,음악)
@@ -519,7 +537,7 @@ public class RootController implements Initializable {
          // 텍스트필드 비활성화(이름x,학년x,반x,성별x,국어x,영어x,수학x,과학x,사회x,음악x)
          textFieldInitSetting(false, false, false, false, false, false, false, false, false, false);
          // 수정화면을 부르기
-         Parent editRoot = FXMLLoader.load(getClass().getResource("/view/formedit.fxml"));
+         Parent editRoot = FXMLLoader.load(getClass().getResource("/view/fromedit.fxml"));
          Stage stageDialog = new Stage(StageStyle.UTILITY);
          stageDialog.initModality(Modality.WINDOW_MODAL);
          stageDialog.initOwner(btnOk.getScene().getWindow());
@@ -587,14 +605,24 @@ public class RootController implements Initializable {
                   throw new Exception();
                } else {
 
-                  StudentVO svo = new StudentVO(editName.getText(), editYear.getText(), editBan.getText(),
-                        editGender.getText(), Integer.parseInt(editKorean.getText().trim()),
+                  StudentVO svo = new StudentVO(
+                        selectStudent.get(0).
+                        getNo(),editName.getText(),
+                        editYear.getText(), 
+                        editBan.getText(),
+                        editGender.getText(), 
+                        Integer.parseInt(editKorean.getText().trim()),
                         Integer.parseInt(editEnglish.getText().trim()),
-                        Integer.parseInt(editMath.getText().trim()), Integer.parseInt(editSic.getText().trim()),
+                        Integer.parseInt(editMath.getText().trim()), 
+                        Integer.parseInt(editSic.getText().trim()),
                         Integer.parseInt(editSoc.getText().trim()),
                         Integer.parseInt(editMusic.getText().trim()),
                         Integer.parseInt(editTotal.getText().trim()),
                         Double.parseDouble(editAvg.getText().trim()));
+                  
+                  StudentDAO studentDAO = new StudentDAO();
+                  StudentVO studentVO=studentDAO.getStudentUpdate(svo,selectStudent.get(0).getNo());
+                  
 
                   // 테이블뷰에 들어가버린 순간
                   if (editDelete == true) {
@@ -758,32 +786,36 @@ public class RootController implements Initializable {
 
    }
    
-   // 14. 맨 처음에 테이블뷰에 데이타베이스 값을 읽어서 테이블뷰에 가져온다.
-	public void btnTotalList(){
-	 	  ArrayList<StudentVO>list=null;
-	 	  StudentDAO studentDAO=new StudentDAO();
-	 	  StudentVO studentVO=null;
-	 	  list=studentDAO.getStudentTotal();
-	 	  if(list==null) {
-	 		 alertDisplay(1,"경고","DB가져오기 오류", "점검요망");
-	 		  return;
-	 	  }
-	 	  
-	 	  for(int i=0;i<list.size();i++) {
-	 		 studentVO =list.get(i);
-	 		 data.add(studentVO);
-	 	  }
-	   }  
-	
-	// 15. 전체 리스틀르 누르면 데이타베이스에서 값을 가져오기
-   public void handlerBtnTotalListAction(ActionEvent e) {
-	   try {
-	data.removeAll(data);
-	btnTotalList();
-	   }catch(Exception e1) {
-		   alertDisplay(1, "전체리스트 오류","15번 전체리스트 오류발생",e1.toString());
-	   }
-}
+   // 14. 맨처음 테이블뷰에 데이터베이스 값을 읽어서 테이블 뷰에 가져온다.
+   public void totalList() {
+         
+            ArrayList<StudentVO> list = null;
+            StudentDAO studentDAO = new StudentDAO();
+            StudentVO studentVO = null;
+            list = studentDAO.getStudentTotal();
+            if (list == null) {
+               alertDisplay(1, "경고", "DB 불러오기 오류", "점검필요");
+               return;
+            } else {
+
+            }
+
+            for (int i = 0; i < list.size(); i++) {
+               studentVO = list.get(i);
+               data.add(studentVO);
+            }
+         }
+ 
+   // 15. 전체를 리스트를 누르면 데이타베이스에서 값을 가져온다.
+      public void handlerBtnTotalListAction(ActionEvent e) {
+         try {
+         data.removeAll(data);
+         totalList();
+         }catch(Exception e1) {
+            alertDisplay(1,"전체 리스트 오류","15번 전체리스트 오류발생",e1.toString());
+         }
+      }
+
    // 경고창디스플레이
    public void alertDisplay(int type, String title, String headerText, String contentText) {
       Alert alert = null;

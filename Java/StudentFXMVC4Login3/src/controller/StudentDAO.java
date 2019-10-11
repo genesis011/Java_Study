@@ -12,7 +12,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
 public class StudentDAO {
-   private int i;
+//   private int i;
 
 // ① 신규 학생 점수 등록
 //	1. 데이타를 입력하는 부분
@@ -47,17 +47,18 @@ public class StudentDAO {
          pstmt.setDouble(12, svo.getAvg());
 
          // ⑤ SQL문을 수행후 처리 결과를 얻어옴
-         count = pstmt.executeUpdate();
+         
+ //        count = pstmt.executeUpdate();
+         int i = pstmt.executeUpdate();
 
          if (i == 1) {
-				alertDisplay(5,"학생 삭제","삭제완","삭제성공");
-
+        	 
+        	 alertDisplay(5,"학생 삭제","삭제완","삭제성공");
 			} else {
 				Alert alert = new Alert(AlertType.INFORMATION);
 				alert.setTitle("학생 삭제");
 				alert.setHeaderText("학생 삭제 실패.");
 				alert.setContentText("학생 삭제 실패!!!");
-
 				alert.showAndWait();
 			}
 
@@ -85,22 +86,27 @@ private void alertDisplay(int i, String string, String string2, String string3) 
 }
 
 // ⑦ 학생의 name을 입력받아 정보 조회
-   public StudentVO getStudentCheck(String name) throws Exception {
+// 학생찾기기능 Select * from schoolchild where name like '%홍길동%';
+   public ArrayList<StudentVO> getStudentCheck(String name) throws Exception {
+	   ArrayList<StudentVO>list=new ArrayList<StudentVO>();
       String dml = "select * from schoolchild where name = ?";
 
       Connection con = null;
       PreparedStatement pstmt = null;
       ResultSet rs = null;
       StudentVO retval = null;
+      String name2 = '%'+name+'%'; 
+      System.out.println("name2"+name2);
       try {
          con = DBUtil.getConnection();
          pstmt = con.prepareStatement(dml);
-         pstmt.setString(1, name);
+         pstmt.setString(1, "%"+name+"%");
          rs = pstmt.executeQuery();
          if (rs.next()) {
             retval = new StudentVO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
                   rs.getInt(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10), rs.getInt(11),
                   rs.getInt(12), rs.getDouble(13));
+            list.add(retval);
          }
       } catch (SQLException se) {
          System.out.println(se);
@@ -117,21 +123,22 @@ private void alertDisplay(int i, String string, String string2, String string3) 
          } catch (SQLException se) {
          }
       }
-      return retval;
+      return list;
    }
 
    // 선택한 학생의 점수 수정
+// 수정기능(update TablerName set 필드명= 수정내용 where 조건내용)
    public StudentVO getStudentUpdate(StudentVO svo, int no) throws Exception {
       // ② 데이터 처리를 위한 SQL 문
       String dml = "update schoolchild set "
             + " korean=?, english=?, math=?, sic=?, soc=?, music=?, total=?, avg=?  where no = ?";
       Connection con = null;
       PreparedStatement pstmt = null;
-      StudentVO retval = null;
+//      StudentVO retval = null;
 
       try {
          // ③ DBUtil이라는 클래스의 getConnection( )메서드로 데이터베이스와 연결
-         con = DBUtil.getConnection();
+         con = DBUtil.getConnection();//디비를 연결시키고 로드까지
 
          // ④ 수정한 학생 정보를 수정하기 위하여 SQL문장을 생성
          pstmt = con.prepareStatement(dml);
@@ -143,26 +150,29 @@ private void alertDisplay(int i, String string, String string2, String string3) 
          pstmt.setInt(6, svo.getMusic());
          pstmt.setInt(7, svo.getTotal());
          pstmt.setDouble(8, svo.getAvg());
-         pstmt.setDouble(9, no);
+         pstmt.setDouble(9, svo.getNo());
 
          // ⑤ SQL문을 수행후 처리 결과를 얻어옴
-         int i = pstmt.executeUpdate();
+         int i = pstmt.executeUpdate(); //
 
          if (i == 1) {
-            Alert alert = new Alert(AlertType.INFORMATION);
-            alert.setTitle("점수 수정");
-            alert.setHeaderText("점수 수정 완료.");
-            alert.setContentText("점수 수정 성공!!!");
-
-            alert.showAndWait();
-            retval = new StudentVO();
+        	 alertDisplay(i, "수정완료", svo.getNo()+"수정되었다.", "와!");
+//            Alert alert = new Alert(AlertType.INFORMATION);
+//            alert.setTitle("점수 수정");
+//            alert.setHeaderText("점수 수정 완료.");
+//            alert.setContentText("점수 수정 성공!!!");
+        	 
+//            alert.showAndWait();
+//            retval = new StudentVO();
          } else {
+        	 
             Alert alert = new Alert(AlertType.INFORMATION);
             alert.setTitle("점수 수정");
             alert.setHeaderText("점수 수정 실패.");
             alert.setContentText("점수 수정 실패!!!");
 
             alert.showAndWait();
+            return null;
          }
 
       } catch (SQLException e) {
@@ -179,15 +189,15 @@ private void alertDisplay(int i, String string, String string2, String string3) 
          } catch (SQLException e) {
          }
       }
-      return retval;
+      return svo;
    }
 //   학생 삭제 기능 
    public void getStudentDelete(int no) throws Exception {
       // ② 데이터 처리를 위한 SQL 문
       String dml = "delete from schoolchild where no = ?";
       Connection con = null;
+      
       PreparedStatement pstmt = null;
-
       try {
          // ③ DBUtil이라는 클래스의 getConnection( )메서드로 데이터베이스와 연결
          con = DBUtil.getConnection();
@@ -204,7 +214,6 @@ private void alertDisplay(int i, String string, String string2, String string3) 
             alert.setTitle("학생 삭제");
             alert.setHeaderText("학생 삭제 완료.");
             alert.setContentText("학생 삭제 성공!!!");
-
             alert.showAndWait();
 
          } else {
@@ -230,7 +239,6 @@ private void alertDisplay(int i, String string, String string2, String string3) 
          } catch (SQLException e) {
          }
       }
-
    }
 
    // 학생 전체 리스트
@@ -307,5 +315,5 @@ private void alertDisplay(int i, String string, String string2, String string3) 
       }
       return columnName;
    }
-
+   
 }

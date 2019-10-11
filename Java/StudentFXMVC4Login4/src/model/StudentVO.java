@@ -1,14 +1,11 @@
 package model;
 
 public class StudentVO {
-	
 	private int no;
 	private String name;
 	private String level;
 	private String ban;
 	private String gender;
-	
-	
 	private int korean;
 	private int english;
 	private int math;
@@ -17,23 +14,10 @@ public class StudentVO {
 	private int music;
 	private int total;
 	private double avg;
-	public StudentVO(int no, String name, String level, String ban, String gender, int korean, int english, int math,
-			int sic, int soc, int music, int total, double avg) {
-		super();
-		this.no = no;
-		this.name = name;
-		this.level = level;
-		this.ban = ban;
-		this.gender = gender;
-		this.korean = korean;
-		this.english = english;
-		this.math = math;
-		this.sic = sic;
-		this.soc = soc;
-		this.music = music;
-		this.total = total;
-		this.avg = avg;
-	}
+	private String register;
+	private String filename; 
+	
+	
 	
 	public StudentVO(String name, String level, String ban, String gender, int korean, int english, int math, int sic,
 			int soc, int music, int total, double avg) {
@@ -52,9 +36,62 @@ public class StudentVO {
 		this.avg = avg;
 	}
 
-	public StudentVO() {
+	public StudentVO(int no, String name, String level, String ban, String gender, int korean, int english, int math,
+			int sic, int soc, int music, int total, double avg) {
+		super();
+		this.no = no;
+		this.name = name;
+		this.level = level;
+		this.ban = ban;
+		this.gender = gender;
+		this.korean = korean;
+		this.english = english;
+		this.math = math;
+		this.sic = sic;
+		this.soc = soc;
+		this.music = music;
+		this.total = total;
+		this.avg = avg;
 	}
 
+	public StudentVO(int no, String name, String level, String ban, String gender, int korean, int english, int math,
+			int sic, int soc, int music, int total, double avg, String register, String filename) {
+		super();
+		this.no = no;
+		this.name = name;
+		this.level = level;
+		this.ban = ban;
+		this.gender = gender;
+		this.korean = korean;
+		this.english = english;
+		this.math = math;
+		this.sic = sic;
+		this.soc = soc;
+		this.music = music;
+		this.total = total;
+		this.avg = avg;
+		this.register = register;
+		this.filename = filename;
+	}
+	
+	public StudentVO(String name, String level, String ban, String gender, int korean, int english, int math, int sic,
+			int soc, int music, int total, double avg, String register, String filename) {
+		super();
+		this.name = name;
+		this.level = level;
+		this.ban = ban;
+		this.gender = gender;
+		this.korean = korean;
+		this.english = english;
+		this.math = math;
+		this.sic = sic;
+		this.soc = soc;
+		this.music = music;
+		this.total = total;
+		this.avg = avg;
+		this.register = register;
+		this.filename = filename;
+	}
 	public int getNo() {
 		return no;
 	}
@@ -133,7 +170,25 @@ public class StudentVO {
 	public void setAvg(double avg) {
 		this.avg = avg;
 	}
-	
-	
-
+	public String getRegister() {
+		return register;
+	}
+	public void setRegister(String register) {
+		this.register = register;
+	}
+	public String getFilename() {
+		return filename;
+	}
+	public void setFilename(String filename) {
+		this.filename = filename;
+	}
 }
+
+
+
+
+
+
+
+
+

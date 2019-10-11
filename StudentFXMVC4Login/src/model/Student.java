@@ -1,24 +1,26 @@
 package model;
 
-public class StudentVO {
-	
-	private int no;
+public class Student {
+	private String no;
 	private String name;
 	private String level;
 	private String ban;
 	private String gender;
-	
-	
-	private int korean;
-	private int english;
-	private int math;
-	private int sic;
-	private int soc;
-	private int music;
-	private int total;
-	private double avg;
-	public StudentVO(int no, String name, String level, String ban, String gender, int korean, int english, int math,
-			int sic, int soc, int music, int total, double avg) {
+	private String korean;
+	private String english;
+	private String math;
+	private String sic;
+	private String soc;
+	private String music;
+	private String total;
+	private String avg;
+
+	public Student() {
+		super();
+	}
+
+	public Student(String no, String name, String level, String ban, String gender, String korean, String english,
+			String math, String sic, String soc, String music, String total, String avg) {
 		super();
 		this.no = no;
 		this.name = name;
@@ -34,9 +36,9 @@ public class StudentVO {
 		this.total = total;
 		this.avg = avg;
 	}
-	
-	public StudentVO(String name, String level, String ban, String gender, int korean, int english, int math, int sic,
-			int soc, int music, int total, double avg) {
+
+	public Student(String name, String level, String ban, String gender, String korean, String english, String math,
+			String sic, String soc, String music, String total, String avg) {
 		super();
 		this.name = name;
 		this.level = level;
@@ -52,88 +54,107 @@ public class StudentVO {
 		this.avg = avg;
 	}
 
-	public StudentVO() {
-	}
-
-	public int getNo() {
+	public String getNo() {
 		return no;
 	}
-	public void setNo(int no) {
+
+	public void setNo(String no) {
 		this.no = no;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public String getLevel() {
 		return level;
 	}
+
 	public void setLevel(String level) {
 		this.level = level;
 	}
+
 	public String getBan() {
 		return ban;
 	}
+
 	public void setBan(String ban) {
 		this.ban = ban;
 	}
+
 	public String getGender() {
 		return gender;
 	}
+
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	public int getKorean() {
+
+	public String getKorean() {
 		return korean;
 	}
-	public void setKorean(int korean) {
+
+	public void setKorean(String korean) {
 		this.korean = korean;
 	}
-	public int getEnglish() {
+
+	public String getEnglish() {
 		return english;
 	}
-	public void setEnglish(int english) {
+
+	public void setEnglish(String english) {
 		this.english = english;
 	}
-	public int getMath() {
+
+	public String getMath() {
 		return math;
 	}
-	public void setMath(int math) {
+
+	public void setMath(String math) {
 		this.math = math;
 	}
-	public int getSic() {
+
+	public String getSic() {
 		return sic;
 	}
-	public void setSic(int sic) {
+
+	public void setSic(String sic) {
 		this.sic = sic;
 	}
-	public int getSoc() {
+
+	public String getSoc() {
 		return soc;
 	}
-	public void setSoc(int soc) {
+
+	public void setSoc(String soc) {
 		this.soc = soc;
 	}
-	public int getMusic() {
+
+	public String getMusic() {
 		return music;
 	}
-	public void setMusic(int music) {
+
+	public void setMusic(String music) {
 		this.music = music;
 	}
-	public int getTotal() {
+
+	public String getTotal() {
 		return total;
 	}
-	public void setTotal(int total) {
+
+	public void setTotal(String total) {
 		this.total = total;
 	}
-	public double getAvg() {
+
+	public String getAvg() {
 		return avg;
 	}
-	public void setAvg(double avg) {
+
+	public void setAvg(String avg) {
 		this.avg = avg;
 	}
-	
-	
-
 }
